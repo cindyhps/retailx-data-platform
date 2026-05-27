@@ -1,0 +1,5 @@
+kafka-python-ng==2.2.2
+six==1.16.0
+pandas==2.2.3
+python-dotenv==1.0.0
+numpy==1.26.4
