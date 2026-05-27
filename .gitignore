@@ -1,0 +1,28 @@
+# Dataset — jangan commit
+data/*.csv
+data/*.parquet
+data/*.json
+
+# DuckDB
+*.duckdb
+*.duckdb.wal
+
+# Secrets
+.env
+.dbt/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+venv/
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+.idea/
+Thumbs.db
