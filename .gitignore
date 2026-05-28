@@ -18,11 +18,16 @@ __pycache__/
 .venv/
 venv/
 
-# Logs
+# Logs and target
 logs/
 *.log
+target/
 
 # OS
 .DS_Store
 .idea/
 Thumbs.db
+
+# Confidential (Account)
+# Admin Acc Airflow - jangan commit 
+notes_account.txt

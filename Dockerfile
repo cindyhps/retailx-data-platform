@@ -1,11 +1,3 @@
-FROM python:3.11-slim
+FROM apache/airflow:2.8.0
 
-WORKDIR /app
-
-COPY requirements.txt .
-
-RUN pip install -r requirements.txt
-
-COPY . .
-
-CMD ["python", "main.py"]
+RUN pip install --no-cache-dir duckdb==0.10.0 confluent-kafka==2.3.0

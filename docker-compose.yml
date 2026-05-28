@@ -1,7 +1,7 @@
-version: '3.8'
-
 x-airflow-common: &airflow-common
-  image: apache/airflow:2.8.0
+  build:
+    context: .
+    dockerfile: Dockerfile.airflow
   env_file: .env
   environment:
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
@@ -10,7 +10,8 @@ x-airflow-common: &airflow-common
     AIRFLOW__WEBSERVER__SECRET_KEY: ${AIRFLOW_WEBSERVER_SECRET_KEY}
   volumes:
     - ./airflow/dags:/opt/airflow/dags
-    - ./dbt:/opt/dbt
+    - ./consumer:/opt/consumer
+    - ./data:/opt/data
   depends_on:
     postgres:
       condition: service_healthy
@@ -66,12 +67,12 @@ services:
     ports:
       - "8081:8080"
     command: webserver
-    mem_limit: 1g
+    mem_limit: 2g
 
   airflow-scheduler:
     <<: *airflow-common
     command: scheduler
-    mem_limit: 1g
+    mem_limit: 2g
 
   grafana:
     image: grafana/grafana:10.2.0
