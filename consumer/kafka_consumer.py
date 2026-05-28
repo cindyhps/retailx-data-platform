@@ -10,8 +10,8 @@ load_dotenv()
 
 # Config
 KAFKA_BOOTSTRAP = os.getenv("KAFKA_BOOTSTRAP", "localhost:9092")
-BATCH_SIZE = 100
-FLUSH_INTERVAL = 30
+BATCH_SIZE = 100 # row
+FLUSH_INTERVAL = 3 # detik
 DB_PATH = os.path.join(os.path.dirname(__file__), '..', 'data', 'retailx.duckdb')
 DLQ_PATH = os.path.join(os.path.dirname(__file__), '..', 'data', 'dlq', 'failed_messages.jsonl')
 

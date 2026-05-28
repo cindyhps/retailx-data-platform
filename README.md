@@ -163,4 +163,24 @@ powershell -ExecutionPolicy Bypass -File scripts/init_kafka_topics.ps1
 | Metabase | http://localhost:3001 |
 
 ## Status
-🚧 Week 1 of 4 — Infrastructure & Streaming Pipeline
+🚧 Week 1 of 3 — Infrastructure & Streaming Pipeline
+
+## dbt Documentation
+
+Generate documentation:
+
+```bash
+dbt docs generate
+```
+
+Serve docs locally:
+
+```bash
+dbt docs serve --port 8081
+```
+
+Open in browser:
+
+```text
+http://localhost:8081
+```

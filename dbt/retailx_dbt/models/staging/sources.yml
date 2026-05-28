@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: orders
+        description: "Raw orders data dari Kafka consumer"
+      - name: order_items
+        description: "Raw order items data dari Kafka consumer"
+      - name: payments
+        description: "Raw payments data dari Kafka consumer"
+      - name: customers
+        description: "Raw customers data dari Kafka consumer"

@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "Fact table - satu baris per order"
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: total_payment_value
+        tests:
+          - not_null
+
+  - name: dim_customers
+    description: "Dimensi customer"
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: mart_daily_revenue
+    description: "Agregat revenue harian"
+    columns:
+      - name: order_date
+        description: "Tanggal order — satu baris per hari"
+        # tests:
+        #   - not_null (Data Olist memang kotong, jadi kita biarkan null untuk order_date)
+      - name: total_revenue
+        # tests:
+        #   - not_null
