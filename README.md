@@ -161,6 +161,7 @@ powershell -ExecutionPolicy Bypass -File scripts/init_kafka_topics.ps1
 | Airflow | http://localhost:8081 |
 | Grafana | http://localhost:3000 |
 | Metabase | http://localhost:3001 |
+| dbt Docs | http://localhost:8085 |
 
 ## Status
 🚧 Week 1 of 3 — Infrastructure & Streaming Pipeline
@@ -176,11 +177,11 @@ dbt docs generate
 Serve docs locally:
 
 ```bash
-dbt docs serve --port 8081
+dbt docs serve --port 8085
 ```
 
 Open in browser:
 
 ```text
-http://localhost:8081
+http://localhost:8085
 ```
