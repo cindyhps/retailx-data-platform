@@ -20,6 +20,7 @@ producer = Producer({
 
 def delivery_report(err, msg):
     
+    
     if err is not None:
         print(f"  ERROR deliver: {err}")
 

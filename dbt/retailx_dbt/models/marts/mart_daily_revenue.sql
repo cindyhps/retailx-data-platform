@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
+
 -- Purpose: 
 -- > Aggregate daily revenue metrics including total orders
 -- > Delivered orders, cancelled orders, total revenue, average order value, average delivery days, and delivery rate percentage.
@@ -16,10 +22,9 @@ with daily as (
         avg(delivery_days)              as avg_delivery_days
     from {{ ref('fct_orders') }}
     where order_date is not null
-        and try_cast(order_date as timestamp) is not null -- filter out invalid dates
+        and try_cast(order_date as timestamp) is not null
     group by order_date, order_month
 )
-
 
 select
     order_date,

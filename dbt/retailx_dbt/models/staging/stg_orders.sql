@@ -1,3 +1,10 @@
+{{
+    config(
+        materialized='incremental',
+        unique_key='order_id'
+    )
+}}
+
 -- Purpose: Clean and transform raw orders data, ensuring correct data types and filtering out invalid records
 
 with source as (

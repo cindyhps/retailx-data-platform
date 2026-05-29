@@ -12,6 +12,7 @@ x-airflow-common: &airflow-common
     - ./airflow/dags:/opt/airflow/dags
     - ./consumer:/opt/consumer
     - ./data:/opt/data
+    - ./dbt:/opt/dbt
   depends_on:
     postgres:
       condition: service_healthy

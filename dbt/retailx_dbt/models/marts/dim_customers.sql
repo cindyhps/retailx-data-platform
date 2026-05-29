@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
+
 -- Purpose: 
 -- > Create a dimension table for customers
 -- > Enriched with order statistics such as total orders, first and last order dates, and total spent.

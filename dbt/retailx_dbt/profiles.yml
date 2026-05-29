@@ -1,0 +1,7 @@
+retailx_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /opt/data/retailx.duckdb
+      threads: 4
