@@ -7,120 +7,19 @@
 Using Brazilian E-Commerce Public Dataset by Olist (Kaggle)
 https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?resource=download
 
-### Data Explorer
+### Dataset Explorer
 
-##### 1. Customer Dataset
-
-| Column Name | Description |
-|---|---|
-| Cust ID | Unique identifier for each customer |
-| Unique ID | Unique customer reference ID |
-| ZIP Code | Customer ZIP code prefix |
-| City | Customer city |
-| State | Customer state |
-
----
-
-##### 2. Geolocation 
-
-| Column Name | Description |
-|---|---|
-| Zip Code | ZIP code prefix |
-| Latitude | Geographic latitude |
-| Longitude | Geographic longitude |
-| City | City name |
-| State | State abbreviation |
-
----
-
-##### 3. Order Item List 
-
-| Column Name | Description |
-|---|---|
-| Order ID | Unique identifier for each order |
-| Order Item ID | Item sequence number within an order |
-| Product ID | Product identifier |
-| Seller ID | Seller identifier |
-| Shipping Limit Date | Shipping deadline date |
-| Price | Product price |
-| Freight Value | Shipping/freight cost |
-
----
-
-##### 4. Order Payments Dataset
-
-| Column Name | Description |
-|---|---|
-| Order ID | Unique order identifier |
-| Payment Sequential | Payment sequence number |
-| Payment Type | Type of payment method |
-| Payment Installments | Number of installments |
-| Payment Value | Total payment value |
-
----
-
-##### 5. Product Review Dataset
-
-| Column Name | Description |
-|---|---|
-| Review ID | Unique review identifier |
-| Order ID | Related order identifier |
-| Review Score | Customer review score |
-| Review Comment Title | Review title |
-| Review Comment Message | Review message content |
-| Review Creation Date | Date review was created |
-| Review Answer Timestamp | Timestamp of review response |
-
----
-
-##### 6. Orders History Dataset
-
-| Column Name | Description |
-|---|---|
-| Order ID | Unique order identifier |
-| Customer ID | Customer identifier |
-| Order Status | Current order status |
-| Order Purchase Timestamp | Purchase timestamp |
-| Order Approved Timestamp | Order approval timestamp |
-| Order Delivered Carrier Date | Carrier delivery date |
-| Order Delivered Customer Date | Customer delivery date |
-| Order Estimated Delivery Date | Estimated delivery date |
-
----
-
-##### 7. Product Dataset
-
-| Column Name | Description |
-|---|---|
-| Product ID | Unique product identifier |
-| Product Category Name | Product category |
-| Product Name Length | Length of product name |
-| Product Description Length | Length of product description |
-| Product Photos Quantity | Number of product photos |
-| Product Weight Gram | Product weight in grams |
-| Product Length CM | Product length in centimeters |
-| Product Height CM | Product height in centimeters |
-| Product Width CM | Product width in centimeters |
-
----
-
-##### 8. Seller Dataset
-
-| Column Name | Description |
-|---|---|
-| Seller ID | Unique seller identifier |
-| Seller ZIP Code Prefix | Seller ZIP code prefix |
-| Seller City | Seller city |
-| Seller State | Seller state |
-
----
-
-##### 9. Translation Dataset
-
-| Column Name | Description |
-|---|---|
-| Product Category Name | Original product category name |
-| Product Category Name English | English-translated category name |
+| Dataset | Attributes |
+|----------|-----------|
+| Customer | Cust ID, Unique ID, ZIP Code, City, State |
+| Geolocation | Zip Code, Latitude, Longitude, City, State |
+| Order Items | Order ID, Order Item ID, Product ID, Seller ID, Shipping Limit Date, Price, Freight Value |
+| Order Payments | Order ID, Payment Sequential, Payment Type, Payment Installments, Payment Value |
+| Product Reviews | Review ID, Order ID, Review Score, Review Comment Title, Review Comment Message, Review Creation Date, Review Answer Timestamp |
+| Orders History | Order ID, Customer ID, Order Status, Order Purchase Timestamp, Order Approved Timestamp, Order Delivered Carrier Date, Order Delivered Customer Date, Order Estimated Delivery Date |
+| Products | Product ID, Product Category Name, Product Name Length, Product Description Length, Product Photos Quantity, Product Weight Gram, Product Length CM, Product Height CM, Product Width CM |
+| Sellers | Seller ID, Seller ZIP Code Prefix, Seller City, Seller State |
+| Category Translation | Product Category Name, Product Category Name English |
 
 ## Architecture
 
